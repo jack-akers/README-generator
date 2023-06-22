@@ -82,7 +82,7 @@ function init() {
     inquirer
     .prompt (questions)
     .then((answers) => {
-        const markdown = generateMarkdown.generateMarkdown(answers);
+        const markdown = generateMarkdown(answers);
         writeToFile("README.md", markdown);
     });
 }
